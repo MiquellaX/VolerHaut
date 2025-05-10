@@ -1,4 +1,4 @@
-export default function HomeContents() {
+export default function BodyContents() {
   return (
     <div>
         <h1 className="flex justify-center items-center h-screen text-4xl font-bold text-red-600">
