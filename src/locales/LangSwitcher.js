@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import {IDFlag, USFlag} from "@/components/Icons/KarmaIcons";
+import {IDFlag, USFlag} from "@/Components/Icons/KarmaIcons";
 
 export default function LanguageSwitcher() {
   const [activeLang, setActiveLang] = useState('');
