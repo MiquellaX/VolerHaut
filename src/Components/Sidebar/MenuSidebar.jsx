@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { AnimatePresence } from 'motion/react'
 import * as motion from 'motion/react-client'
 import { X } from 'lucide-react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import LanguageSwitcher from '@/locales/LangSwitcher'
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/Components/ui/accordion";
 
 const MenuSidebar = ({ menuSidebar, setMenuSidebar, setCategoriesDropdown, categoriesDropdown, lang }) => {
 	// const [categories, setCategories] = useState([]);
