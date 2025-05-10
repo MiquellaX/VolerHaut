@@ -68,7 +68,7 @@ const FooterContents = () => {
 			<motion.div
 				initial='hidden'
 				whileInView='visible'
-				viewport={{ once: true }}
+				viewport={{ once: false }}
 				variants={up}
 				className='h-full w-full pt-20'
 			>
