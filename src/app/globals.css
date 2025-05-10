@@ -173,7 +173,7 @@ html {
 	}
 
 	.button-black {
-		@apply sm:text-base text-sm text-center items-center p-1 px-5 bg-stone-950 text-stone-200 transition duration-200 hover:bg-stone-950/80 rounded;
+		@apply sm:text-base text-sm text-center items-center p-1 px-5 bg-stone-950 text-stone-200 transition duration-200 hover:bg-stone-950/80 rounded cursor-pointer;
 	}
 
 	.button-white {

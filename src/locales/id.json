@@ -1,5 +1,5 @@
 {
-	"Volerhaut": {
+	"VolerhautText": {
 		"browse": "Jelajahi",
 		"seemoredetails": "Lihat detail lebih lanjut",
 		"continueshopping": "Lanjutkan berbelanja",
@@ -43,7 +43,7 @@
 			"title": "Hubungi Kami",
 			"items": [
 				"Dukungan Pelanggan",
-				"Email: support@Volerhaut.com",
+				"Email: support@volerhaut.store",
 				"Phone: +123 456 789"
 			]
 		},
