@@ -1,17 +1,16 @@
-'use client'
+"use client";
 import React, { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { AnimatePresence } from "motion/react"
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { KarmaFacebookIcon, KarmaIGIcon } from "../Icons/KarmaIcons";
-import * as motion from "motion/react-client"
+import * as motion from "motion/react-client";
 
 const HeaderAnnouncement = () => {
-
 	const announcements = [
 		"MASIH DALAM PROSES DEVELOPMENT",
 		"PERKIRAAN BULAN DEPAN SELESAI",
-		"JANGAN LUPA KUNJUNGI KAMI NANTI!"
+		"JANGAN LUPA KUNJUNGI KAMI NANTI!",
 	];
 
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,18 +43,19 @@ const HeaderAnnouncement = () => {
 	return (
 		<>
 			<div className="relative bg-black/90 dark:bg-white text-white dark:text-black p-2">
-				<div className={'hidden sm:flex absolute gap-5 px-52'}>
+				<div className={"hidden sm:flex absolute gap-5 px-52"}>
 					<Link
-						href={'https://facebook.com/kiraftmisa'}
-						target={'_blank'}
+						href={"https://www.facebook.com/mary.purple.piano"}
+						target={"_blank"}
 					>
-						<KarmaFacebookIcon className={'w-5 h-5 transition duration-100 hover:scale-110'} />
+						<KarmaFacebookIcon
+							className={"w-5 h-5 transition duration-100 hover:scale-110"}
+						/>
 					</Link>
-					<Link
-						href={'https://instagram.com/ig.godtest'}
-						target={'_blank'}
-					>
-						<KarmaIGIcon className={'w-5 h-5 transition duration-100 hover:scale-110'} />
+					<Link href={"https://instagram.com/ig.godtest"} target={"_blank"}>
+						<KarmaIGIcon
+							className={"w-5 h-5 transition duration-100 hover:scale-110"}
+						/>
 					</Link>
 				</div>
 				<div className="max-w-lg mx-auto relative">
@@ -71,7 +71,7 @@ const HeaderAnnouncement = () => {
 						<motion.div
 							initial={{ opacity: 0, x: 20 }}
 							animate={{ opacity: 1, x: 0 }}
-							transition={{ duration: 0.3, ease: 'easeInOut' }}
+							transition={{ duration: 0.3, ease: "easeInOut" }}
 							className="w-full px-8"
 						>
 							<AnimatePresence mode="wait">
@@ -82,7 +82,7 @@ const HeaderAnnouncement = () => {
 									exit={{ opacity: 0, x: -20 }}
 									transition={{
 										duration: 0.3,
-										ease: [0.4, 0, 0.2, 1]
+										ease: [0.4, 0, 0.2, 1],
 									}}
 									className="text-xs text-center"
 								>
