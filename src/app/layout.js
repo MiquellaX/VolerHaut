@@ -18,23 +18,23 @@ export const metadata = {
 		siteName: BRAND,
 		title: `${BRAND} | Premium Fashion & Accessories`,
 		description: `Discover top-tier fashion and accessories at ${BRAND}. Our curated collection features luxury leather jackets, trendy apparel, and more.`,
-		url: 'https://volterhout.store',
+		url: 'https://volerhaut.store',
 		type: 'website',
 		images: [
 			{
-				url: '/karmamix.png',
+				url: '/vh.png',
 				width: 1200,
 				height: 630,
 				alt: `${BRAND} Featured Product`,
 			},
 			{
-				url: '/karmamix.png',
+				url: '/vh.png',
 				width: 800,
 				height: 800,
 				alt: `${BRAND} Featured Product`,
 			},
 			{
-				url: '/karmamix.png',
+				url: '/vh.png',
 				width: 800,
 				height: 800,
 				alt: `${BRAND} Logo`,
@@ -45,7 +45,7 @@ export const metadata = {
 		card: 'summary_large_image',
 		title: `${BRAND} | Premium Fashion & Accessories`,
 		description: `Explore luxury fashion and accessories at ${BRAND}. Featuring high-end apparel and more.`,
-		images: '/karmamix.png',
+		images: '/vh.png',
 	},
 	/*facebook: {
 		appId: 'your-facebook-app-id',
