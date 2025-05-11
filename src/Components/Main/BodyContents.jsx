@@ -138,7 +138,7 @@ export default function TestMorph() {
 	  </div> */}
 
 			{/* Additional Content (ScrollTrigger Animations) */}
-			<section className="h-screen bg-gray-100 flex flex-col items-center justify-center text-center p-10 fade-in">
+			<section className="h-screen flex flex-col items-center justify-center text-center p-10 fade-in">
 				<h2 className="text-4xl sm:text-6xl font-bold mb-6">
 					Welcome to Volerhaut
 				</h2>
@@ -149,7 +149,7 @@ export default function TestMorph() {
 				</p>
 			</section>
 
-			<section className="h-screen bg-white flex flex-col items-center justify-center text-center p-10 slide-right">
+			<section className="h-screen flex flex-col items-center justify-center text-center p-10 slide-right">
 				<h2 className="text-4xl sm:text-6xl font-bold mb-6">Why Choose Us?</h2>
 				<p className="text-lg sm:text-xl text-stone-500 max-w-3xl">
 					At Volerhaut, we prioritize quality, craftsmanship, and timeless
