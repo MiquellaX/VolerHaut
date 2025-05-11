@@ -8,9 +8,9 @@ import * as motion from "motion/react-client";
 
 const HeaderAnnouncement = () => {
 	const announcements = [
-		"MASIH DALAM PROSES DEVELOPMENT",
-		"PERKIRAAN BULAN DEPAN SELESAI",
-		"JANGAN LUPA KUNJUNGI KAMI NANTI!",
+		"STILL IN DEVELOPMENT",
+		"EXPECTED TO BE COMPLETED NEXT MONTH",
+		"DON'T FORGET TO VISIT US LATER!",
 	];
 
 	const [currentIndex, setCurrentIndex] = useState(0);
