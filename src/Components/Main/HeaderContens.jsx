@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
@@ -11,7 +11,7 @@ import SearchSidebar from "../Sidebar/SearchSidebar";
 import { useTranslations } from "next-intl";
 
 const HeaderContents = () => {
-	const lang = useTranslations('VolerhautText');
+	const lang = useTranslations("VolerhautText");
 	const pathname = usePathname();
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [userSidebar, setUserSidebar] = useState(false);
@@ -40,63 +40,81 @@ const HeaderContents = () => {
 		};
 	}, [isScrolled]);
 
-	let bagItems = '';
+	let bagItems = "";
 
 	return (
-		<header className={`top-0 z-[5] bg-white dark:bg-stone-950 ${cicing ? 'relative' : 'sticky'} ${awas ? 'hidden' : 'block'}`}>
+		<header
+			className={`top-0 z-[5] bg-white dark:bg-stone-950 ${
+				cicing ? "relative" : "sticky"
+			} ${awas ? "hidden" : "block"}`}
+		>
 			<div className="flex items-center justify-between px-5 sm:px-20 py-3 border-b border-black/20">
-
 				{/* KONTEN HEADER */}
 
 				{/* KIRI */}
 				<div className="flex items-center gap-5">
 					<div className="text-sm gap-4">
-						<Menu className="icon w-6 h-6" onClick={() => {
+						<Menu
+							className="icon w-6 h-6"
+							onClick={() => {
 								setMenuSidebar(!menuSidebar);
 								setSearchSidebar(false);
-							}} 
+							}}
 						/>
 					</div>
 				</div>
 
 				{/* TENGAH */}
 				<div className="absolute left-28 sm:left-1/2 transform -translate-x-1/2">
-					<Link
-						href={'/'}
-						aria-label="Home"
-					>
+					<Link href={"/"} aria-label="Home">
 						<BrandIcon isScrolled={isScrolled} />
 					</Link>
 				</div>
 
 				{/* KANAN */}
 				<div className="flex items-center gap-4">
-					<Search className={'icon'} onClick={() => setSearchSidebar(!searchSidebar)} />
-					<div className={'relative'}>
-						<ShoppingBag className={'icon'} onClick={() => {
+					<Search
+						className={"icon"}
+						onClick={() => setSearchSidebar(!searchSidebar)}
+					/>
+					<div className={"relative"}>
+						<ShoppingBag
+							className={"icon"}
+							onClick={() => {
 								setBagSidebar(!bagSidebar);
 								setSearchSidebar(false);
-							}} 
+							}}
 						/>
 					</div>
-					<User2 className={'icon'} onClick={() => {
+					<User2
+						className={"icon"}
+						onClick={() => {
 							setUserSidebar(!userSidebar);
 							setSearchSidebar(false);
-						}} 
+						}}
 					/>
 				</div>
 			</div>
 
 			{/* KONTEN HEADER END */}
 
-
 			{/* SIDEBAR */}
 
 			{/* SEARCH SIDEBAR */}
-			<SearchSidebar isOpen={searchSidebar} setIsOpen={setSearchSidebar} lang={lang} />
+			<SearchSidebar
+				isOpen={searchSidebar}
+				setIsOpen={setSearchSidebar}
+				lang={lang}
+			/>
 
 			{/* MENU SIDEBAR */}
-			<MenuSidebar menuSidebar={menuSidebar} setMenuSidebar={setMenuSidebar} categoriesDropdown={categoriesDropdown} setCategoriesDropdown={setCategoriesDropdown} lang={lang} />
+			<MenuSidebar
+				menuSidebar={menuSidebar}
+				setMenuSidebar={setMenuSidebar}
+				categoriesDropdown={categoriesDropdown}
+				setCategoriesDropdown={setCategoriesDropdown}
+				lang={lang}
+			/>
 
 			{/* USER SIDEBAR */}
 			<InfoSidebar isOpen={userSidebar} setIsOpen={setUserSidebar}>
@@ -105,8 +123,8 @@ const HeaderContents = () => {
 						<X className="icon w-8 h-8" onClick={() => setUserSidebar(false)} />
 					</div>
 					<div className="py-10 border-b border-black/20">
-						<h1 className="text-xl font-bold">{lang('profile')}</h1>
-						<h2 className="text-stone-500 text-sm">{lang('reviewprofile')}</h2>
+						<h1 className="text-xl font-bold">{lang("profile")}</h1>
+						<h2 className="text-stone-500 text-sm">{lang("reviewprofile")}</h2>
 					</div>
 				</div>
 			</InfoSidebar>
@@ -121,8 +139,8 @@ const HeaderContents = () => {
 					{bagItems ? (
 						<>
 							<div className="py-10 border-b border-black/20">
-								<h1 className="text-xl font-bold">{lang('yourshoppingbag')}</h1>
-								<h2 className="text-stone-500 text-sm">{lang('reviewbag')}</h2>
+								<h1 className="text-xl font-bold">{lang("yourshoppingbag")}</h1>
+								<h2 className="text-stone-500 text-sm">{lang("reviewbag")}</h2>
 							</div>
 							<div className="flex flex-col justify-center items-center py-10">
 								<p>ANU 1</p>
@@ -134,8 +152,10 @@ const HeaderContents = () => {
 					) : (
 						<div className="flex flex-col items-center justify-center h-[80vh]">
 							<h1 className="mb-10">EMPTY</h1>
-							<Link href={'#'} onClick={() => setBagSidebar(false)}>
-								<button name="SHOPPING" className="button-black">{lang('continueshopping').toUpperCase()}</button>
+							<Link href={"#"} onClick={() => setBagSidebar(false)}>
+								<button name="SHOPPING" className="button-black">
+									{lang("continueshopping").toUpperCase()}
+								</button>
 							</Link>
 						</div>
 					)}
@@ -143,7 +163,6 @@ const HeaderContents = () => {
 			</InfoSidebar>
 
 			{/* SIDEBAR END */}
-
 		</header>
 	);
 };

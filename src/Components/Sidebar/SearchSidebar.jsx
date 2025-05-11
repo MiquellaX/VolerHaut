@@ -1,15 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { AnimatePresence } from 'motion/react';
-import * as motion from 'motion/react-client';
+import React, { useEffect, useState, useRef } from "react";
+import { AnimatePresence } from "motion/react";
+import * as motion from "motion/react-client";
 // import Link from 'next/link';
 // import { ThreeDotsScale } from 'react-svg-spinners';
 // import IDR from '@/lib/currency';
 // import Image from 'next/image';
 // import { urlFor } from '@/sanity/lib/image';
-import { X } from 'lucide-react';
+import { X } from "lucide-react";
 
 const SearchSidebar = ({ isOpen, setIsOpen, lang }) => {
-	const [searchTerm, setSearchTerm] = useState('');
+	const [searchTerm, setSearchTerm] = useState("");
 	// const [products, setProducts] = useState([]);
 	// const [genders, setGenders] = useState([]);
 	// const [loading, setLoading] = useState(false);
@@ -91,14 +91,14 @@ const SearchSidebar = ({ isOpen, setIsOpen, lang }) => {
 
 	useEffect(() => {
 		if (isOpen) {
-			document.body.style.overflow = 'hidden'
+			document.body.style.overflow = "hidden";
 		} else {
-			document.body.style.overflow = 'auto'
+			document.body.style.overflow = "auto";
 		}
 		return () => {
-			document.body.style.overflow = 'auto'
-		}
-	}, [isOpen])
+			document.body.style.overflow = "auto";
+		};
+	}, [isOpen]);
 
 	// if (loading) {
 	//   return (
@@ -138,22 +138,22 @@ const SearchSidebar = ({ isOpen, setIsOpen, lang }) => {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 0.3 }}
 						exit={{ opacity: 0 }}
-						transition={{ duration: 0.2, ease: 'easeInOut' }}
+						transition={{ duration: 0.2, ease: "easeInOut" }}
 						className="fixed top-12 inset-0 bg-black z-[2]"
 						onClick={() => setIsOpen(false)}
 					/>
 
 					<motion.div
-						initial={{ opacity: 0, height: '-50%' }}
-						animate={{ opacity: 1, height: '100%' }}
-						exit={{ opacity: 0, height: '-50%' }}
-						transition={{ duration: 0.2, ease: 'easeInOut' }}
+						initial={{ opacity: 0, height: "-50%" }}
+						animate={{ opacity: 1, height: "100%" }}
+						exit={{ opacity: 0, height: "-50%" }}
+						transition={{ duration: 0.2, ease: "easeInOut" }}
 						className="fixed top-12 w-full bg-white z-[3] scroll pb-20"
 					>
 						<div className="relative p-5 py-10 flex w-screen max-w-2xl mx-auto items-center justify-between">
 							<div>
-								<h1 className="text-xl font-bold">{lang('searchproducts')}</h1>
-								<h2 className="text-stone-500">{lang('searchsomething')}</h2>
+								<h1 className="text-xl font-bold">{lang("searchproducts")}</h1>
+								<h2 className="text-stone-500">{lang("searchsomething")}</h2>
 							</div>
 							<div>
 								<X className="icon w-8 h-8" onClick={() => setIsOpen(false)} />
@@ -170,7 +170,7 @@ const SearchSidebar = ({ isOpen, setIsOpen, lang }) => {
 									placeholder=""
 									value={searchTerm}
 									onChange={(e) => setSearchTerm(e.target.value)}
-									autoComplete='off'
+									autoComplete="off"
 									required
 								/>
 								<label
@@ -179,7 +179,7 @@ const SearchSidebar = ({ isOpen, setIsOpen, lang }) => {
                                   peer-valid:top-3 peer-valid:text-xs 
                                   peer-focus:top-3 peer-focus:text-xs cursor-text"
 								>
-									{lang('searchproducts')}
+									{lang("searchproducts")}
 								</label>
 
 								{/* SHOW PRODUK NU GEUS DI FILTER KU SEARCH */}

@@ -1,12 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import { AnimatePresence } from 'motion/react'
-import * as motion from 'motion/react-client'
-import { X } from 'lucide-react'
+import React, { useEffect, useState } from "react";
+import { AnimatePresence } from "motion/react";
+import * as motion from "motion/react-client";
+import { X } from "lucide-react";
 // import Link from 'next/link'
-import LanguageSwitcher from '@/locales/LangSwitcher'
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/Components/ui/accordion";
+import LanguageSwitcher from "@/locales/LangSwitcher";
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/Components/ui/accordion";
 
-const MenuSidebar = ({ menuSidebar, setMenuSidebar, setCategoriesDropdown, categoriesDropdown, lang }) => {
+const MenuSidebar = ({
+	menuSidebar,
+	setMenuSidebar,
+	setCategoriesDropdown,
+	categoriesDropdown,
+	lang,
+}) => {
 	// const [categories, setCategories] = useState([]);
 
 	// useEffect(() => {
@@ -18,48 +29,57 @@ const MenuSidebar = ({ menuSidebar, setMenuSidebar, setCategoriesDropdown, categ
 
 	useEffect(() => {
 		if (menuSidebar) {
-			document.body.style.overflow = 'hidden'
+			document.body.style.overflow = "hidden";
 		} else {
-			document.body.style.overflow = 'auto'
+			document.body.style.overflow = "auto";
 		}
 		return () => {
-			document.body.style.overflow = 'auto'
-		}
-	}, [menuSidebar])
+			document.body.style.overflow = "auto";
+		};
+	}, [menuSidebar]);
 
 	return (
-		<AnimatePresence mode='wait'>
+		<AnimatePresence mode="wait">
 			{menuSidebar && (
 				<>
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 0.3 }}
 						exit={{ opacity: 0 }}
-						transition={{ duration: 0.2, ease: 'easeInOut' }}
-						className='fixed inset-0 bg-black z-[2]'
+						transition={{ duration: 0.2, ease: "easeInOut" }}
+						className="fixed inset-0 bg-black z-[2]"
 						onClick={() => setMenuSidebar(false)}
 					/>
 
 					<motion.div
-						initial={{ opacity: 0, x: '-100%' }}
+						initial={{ opacity: 0, x: "-100%" }}
 						animate={{ opacity: 1, x: 0 }}
-						exit={{ opacity: 0, x: '-100%' }}
-						transition={{ duration: 0.2, ease: 'easeInOut' }}
-						className='fixed top-0 h-screen w-full max-w-xl bg-white z-[3] overflow-hidden'
+						exit={{ opacity: 0, x: "-100%" }}
+						transition={{ duration: 0.2, ease: "easeInOut" }}
+						className="fixed top-0 h-screen w-full max-w-xl bg-white z-[3] overflow-hidden"
 					>
 						<div className="h-full scroll overflow-y-auto container">
 							<div className="relative min-h-full p-4">
 								<div className="absolute top-2 right-2">
-									<X className="icon w-8 h-8" onClick={() => setMenuSidebar(false)} />
+									<X
+										className="icon w-8 h-8"
+										onClick={() => setMenuSidebar(false)}
+									/>
 								</div>
 								<div className="mt-10 border-b border-black/20">
-									<h1 className="text-xl font-bold">{lang('menu')}</h1>
-									<h2 className="text-stone-500 text-sm">{lang('menunavigation')}</h2>
-									<Accordion type="single" className='w-full sm:w-52' collapsible>
+									<h1 className="text-xl font-bold">{lang("menu")}</h1>
+									<h2 className="text-stone-500 text-sm">
+										{lang("menunavigation")}
+									</h2>
+									<Accordion
+										type="single"
+										className="w-full sm:w-52"
+										collapsible
+									>
 										<AccordionItem value="item-1">
-											<AccordionTrigger>{lang('language')}</AccordionTrigger>
-											<AccordionContent className={'text-stone-600'}>
-												<LanguageSwitcher/>
+											<AccordionTrigger>{lang("language")}</AccordionTrigger>
+											<AccordionContent className={"text-stone-600"}>
+												<LanguageSwitcher />
 											</AccordionContent>
 										</AccordionItem>
 									</Accordion>
@@ -97,7 +117,7 @@ const MenuSidebar = ({ menuSidebar, setMenuSidebar, setCategoriesDropdown, categ
 				</>
 			)}
 		</AnimatePresence>
-	)
-}
+	);
+};
 
 export default MenuSidebar;

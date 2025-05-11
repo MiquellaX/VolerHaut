@@ -53,17 +53,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${assistantFont.variable} antialiased`}
-      >
-        <InterLang>
-            <main>
-                {children}
-            </main>
-        </InterLang>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body
+				className={`${assistantFont.variable} antialiased`}
+			>
+				<InterLang>
+					<main>
+						{children}
+					</main>
+				</InterLang>
+			</body>
+		</html>
+	);
 }
