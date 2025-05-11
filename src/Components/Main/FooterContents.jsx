@@ -73,8 +73,8 @@ const FooterContents = () => {
 				className='h-full w-full pt-20'
 			>
 				<footer className='pb-10 border-t border-stone-300 px-5 overflow-hidden'>
-					<div className='w-72 mx-auto'>
-						<Image src={'/nisaetus.png'} width={800} height={600} alt='Volerhaut' priority={true} className='w-auto h-auto' />
+					<div className='w-72 mx-auto mb-10'>
+						<Image src={'/vh.png'} width={800} height={600} alt='Volerhaut' priority={true} className='w-auto h-auto' />
 					</div>
 					<div className='w-full max-w-6xl flex flex-col gap-5 items-center mx-auto text-center -mt-14 mb-10'>
 						<h1 className='text-2xl font-bold'>
