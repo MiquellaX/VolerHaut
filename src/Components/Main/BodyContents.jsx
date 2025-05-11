@@ -140,7 +140,7 @@ export default function TestMorph() {
 			{/* Additional Content (ScrollTrigger Animations) */}
 			<section className="h-screen flex flex-col items-center justify-center text-center p-10 fade-in">
 				<h2 className="text-4xl sm:text-6xl font-bold mb-6">
-					Welcome to Volerhaut
+					Welcome to Voler Haut
 				</h2>
 				<p className="text-lg sm:text-xl text-stone-500 max-w-3xl">
 					Discover the elegance of premium fashion and accessories. Our curated
@@ -152,7 +152,7 @@ export default function TestMorph() {
 			<section className="h-screen flex flex-col items-center justify-center text-center p-10 slide-right">
 				<h2 className="text-4xl sm:text-6xl font-bold mb-6">Why Choose Us?</h2>
 				<p className="text-lg sm:text-xl text-stone-500 max-w-3xl">
-					At Volerhaut, we prioritize quality, craftsmanship, and timeless
+					At Voler Haut, we prioritize quality, craftsmanship, and timeless
 					design. Our products are made to last and leave a lasting impression.
 				</p>
 			</section>
