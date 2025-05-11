@@ -65,7 +65,7 @@ const HeaderContents = () => {
 				</div>
 
 				{/* TENGAH */}
-				<div className="absolute left-28 sm:left-1/2 transform -translate-x-1/2">
+				<div className="absolute left-36 sm:left-1/2 transform -translate-x-1/2">
 					<Link href={"/"} aria-label="Home">
 						<BrandIcon isScrolled={isScrolled} />
 					</Link>
